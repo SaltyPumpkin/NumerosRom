@@ -1,11 +1,12 @@
 z = "Ingrese un texto en minuscula con números romanos en mayusculas: "
-a = [["I",1],["V",5],["X",10],["L",50],["C",100],["D",500],["M",1000]] #siempre en 0 tengo la letra y en 1 tengo el significado
+a = [["I",1],["X",10],["C",100]] #siempre en 0 tengo la letra y en 1 tengo el significado
+f = [["V",5],["L",50],["D",500]]
 b = input(z)
 b = b.replace(",","") #remover comas y puntuacion
 b = b.replace(".","")
 c = b.split() #va a separar por espacios las palabras y las guarda en una lista
 d = "" #las palabras que van a ir en el texto final
-    
+
 for i in range(len(c)): #va a recorrer cada uno de los elementos, recorre cada una de las palabras
     if c[i].isupper(): #isupper determina si la cadena de texto es mayuscula o minuscula
         e = [] #lista auxiliar, guarda equivalencias de los números
@@ -14,6 +15,9 @@ for i in range(len(c)): #va a recorrer cada uno de los elementos, recorre cada u
                 if j == a[k][0]: #si la letra en la posicion k_0 es la letra, y 0 es la letra
                     e.append(a[k][1]) #Aqui busca el número
                     break #se encuentra la equivalencia y sigue con la siguiente letra
+                if j == f[k][0]:
+                    e.append(f[k][1])
+                    break
         if len(c[i]) == len(e): #el tamaño de la palabra es igual al tamaño de las equivalencias encontradas
             suma = 0
             aux = e[0] # se guarda la primera equivalencia 
