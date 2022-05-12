@@ -2,8 +2,8 @@ z = "Ingrese un texto en minuscula con números romanos en mayusculas: "
 a = [["I",1],["X",10],["C",100]] #siempre en 0 tengo la letra y en 1 tengo el significado
 f = [["V",5],["L",50],["D",500]]
 b = input(z)
-b = b.replace(",","") #remover comas y puntuacion
-b = b.replace(".","")
+b = b.replace(","," , ") #remover comas y puntuacion
+b = b.replace("."," . ")
 c = b.split() #va a separar por espacios las palabras y las guarda en una lista
 d = "" #las palabras que van a ir en el texto final
 
@@ -32,5 +32,9 @@ for i in range(len(c)): #va a recorrer cada uno de los elementos, recorre cada u
         else: #si el tamaño de la palabra no es igual a las equivalencias, deja la palabra tal y como esta
             d = d+" "+c[i]
     else: #si la palabra es minuscula, se deja tal como esta
-        d = d+" "+c[i] #Sin comas porque imprime mal
+        if c[i] != "," and c[i] != ".":
+            d = d + " "
+        d = d+c[i]+"" #Sin comas porque imprime mal
+        
+
 print(d)
