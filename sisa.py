@@ -10,7 +10,7 @@ for i in range(len(c)): #va a recorrer cada uno de los elementos, recorre cada u
             for k in range(len(a)): #Para hacer la busqueda en la lista a
                 if j == a[k][0]: #si la letra en la posicion k_0 es la letra, y 0 es la letra
                     e.append(a[k][1]) #Aqui busca el número
-                    break 
+                    break #se encuentra la equivalencia y sigue con la siguiente letra
         if len(c[i]) == len(e): #el tamaño de la palabra es igual al tamaño de las equivalencias encontradas
             suma = 0
             aux = e[0] # se guarda la primera equivalencia 
