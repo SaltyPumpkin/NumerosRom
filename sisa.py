@@ -1,5 +1,5 @@
 z = "Ingrese un texto en minuscula con números romanos en mayusculas: "
-a = [["I",1],["V",5],["X",10],["L",50],["C",100]] #siempre en 0 tengo la letra y en 1 tengo el significado
+a = [["I",1],["V",5],["X",10],["L",50],["C",100],["D",500],["M",1000]] #siempre en 0 tengo la letra y en 1 tengo el significado
 b = input(z)
 b = b.replace(",","") #remover comas y puntuacion
 b = b.replace(".","")
