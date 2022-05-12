@@ -1,8 +1,11 @@
 z = "Ingrese un texto en minuscula con números romanos en mayusculas: "
 a = [["I",1],["V",5],["X",10],["L",50],["C",100]] #siempre en 0 tengo la letra y en 1 tengo el significado
 b = input(z)
+b = b.replace(",","") #remover comas y puntuacion
+b = b.replace(".","")
 c = b.split() #va a separar por espacios las palabras y las guarda en una lista
 d = "" #las palabras que van a ir en el texto final
+    
 for i in range(len(c)): #va a recorrer cada uno de los elementos, recorre cada una de las palabras
     if c[i].isupper(): #isupper determina si la cadena de texto es mayuscula o minuscula
         e = [] #lista auxiliar, guarda equivalencias de los números
